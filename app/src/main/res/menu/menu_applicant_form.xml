@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/sendForm"
+        android:orderInCategory="100"
+        android:title="@string/sendForm"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_send_black_24dp"
+        />
+    <item android:id="@+id/attachFile"
+        android:orderInCategory="100"
+        android:title="@string/attachfile"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_attach_file_white_24dp"
+        />
+    <item android:id="@+id/discard"
+        android:orderInCategory="100"
+        android:title="@string/discard"
+        app:showAsAction="never"
+        />
+</menu>

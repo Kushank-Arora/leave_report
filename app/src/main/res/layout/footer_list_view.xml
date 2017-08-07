@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:id="@+id/llFileAttachedContainer"
+        android:layout_marginTop="15dp">
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/acceptTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/illute_button"
+            android:clickable="true"
+            android:drawableTop="@drawable/ic_accept"
+            android:enabled="true"
+            android:gravity="center_horizontal"
+            android:text="Accept"
+            android:textColor="#666"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#ddd" />
+
+        <TextView
+            android:id="@+id/rejectTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/illute_button"
+            android:clickable="true"
+            android:drawableTop="@drawable/ic_reject"
+            android:enabled="true"
+            android:gravity="center_horizontal"
+            android:text="Reject"
+            android:textColor="#666"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="*More applicants for a subset of this duration"
+        android:textColor="#E92227"
+        android:layout_marginLeft="10dp"
+        android:padding="10dp"
+        android:id="@+id/tvWarning" />
+
+    <EditText
+        android:id="@+id/etComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@android:drawable/editbox_background"
+        android:gravity="top|left"
+        android:hint="Comments"
+        android:minLines="5"
+        android:textSize="14sp" />
+
+</LinearLayout>

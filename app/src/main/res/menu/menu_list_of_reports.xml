@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".verifier.ListOfReportsActivity">
+    <item
+        android:id="@+id/action_leave_calendar"
+        android:orderInCategory="100"
+        android:title="@string/leave_calendar"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/SignOut"
+        android:orderInCategory="100"
+        android:title="@string/signOut"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="arora.kushank.leavereport.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leave Application"
+        android:layout_marginTop="100dp"
+        android:textSize="50sp"
+        android:layout_alignStart="@+id/bloginApplicant"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login As Verifier"
+        android:id="@+id/bloginVerifier"
+        android:textAllCaps="false"
+        android:layout_above="@+id/bloginApplicant"
+        android:layout_centerHorizontal="true"
+        android:width="300dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login As Applicant"
+        android:id="@+id/bloginApplicant"
+        android:layout_alignParentBottom="true"
+        android:textAllCaps="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:width="300dp"
+        />
+
+</RelativeLayout>

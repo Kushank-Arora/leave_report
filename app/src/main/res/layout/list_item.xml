@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="7dp"
+    android:paddingRight="12dp"
+    android:paddingTop="7dp"
+    android:paddingBottom="14dp"
+    android:id="@+id/itemLayout"
+    >
+    <ImageView
+        android:layout_margin="8dp"
+        android:id="@+id/image"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img2" />
+
+    <LinearLayout
+        android:id="@+id/layoutTexts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/image"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp">
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/sender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What What What What What What What "
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:layout_marginEnd="60dp"/>
+
+            <TextView
+                android:textColor="#46d"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/time"
+                android:layout_alignBaseline="@+id/sender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2:00 PM"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <TextView
+            android:textColor="#000"
+            android:id="@+id/subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Here"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:paddingRight="30dp"/>
+
+
+        <TextView
+            android:textColor="#666"
+            android:id="@+id/shortDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Here2"
+            android:textSize="14sp"
+            android:paddingRight="30dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Approved"
+        android:visibility="gone"
+        android:id="@+id/tvStatus"
+        android:layout_alignBottom="@+id/layoutTexts"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>

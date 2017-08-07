@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".applicant.ApplicantForm"
+    tools:showIn="@layout/activity_applicant_form">
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="@dimen/labelWidthForm"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/etForm"
+            android:padding="@dimen/paddingForm"
+            android:text="Leave" />
+
+        <Spinner
+            android:id="@+id/spSelectTOL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:padding="@dimen/paddingForm"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_width"
+        android:layout_below="@+id/ll1"
+        android:background="#ddd" />
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v1">
+
+        <TextView
+            android:layout_width="@dimen/labelWidthForm"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/etForm"
+            android:padding="@dimen/paddingForm"
+            android:text="Subject" />
+
+        <EditText
+            android:id="@+id/etForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@android:drawable/editbox_background"
+            android:inputType="textMultiLine"
+            android:padding="@dimen/paddingForm"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_width"
+        android:layout_below="@+id/ll2"
+        android:background="#ddd" />
+
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v2">
+
+        <TextView
+            android:layout_width="@dimen/labelWidthForm"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingForm"
+            android:text="Duration" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etDateFrom"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:background="@android:drawable/editbox_background"
+                android:inputType="date"
+                android:padding="@dimen/paddingForm"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/paddingForm"
+                android:text="to" />
+
+            <EditText
+                android:id="@+id/etDateTo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:background="@android:drawable/editbox_background"
+                android:inputType="date"
+                android:padding="@dimen/paddingForm"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_width"
+        android:layout_below="@+id/ll3"
+        android:background="#ddd" />
+
+    <LinearLayout
+        android:id="@+id/ll4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v3">
+
+        <TextView
+            android:id="@+id/tvadd"
+            android:layout_width="@dimen/labelWidthForm"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:labelFor="@+id/etAddress"
+            android:padding="@dimen/paddingForm"
+            android:text="Temporary Address" />
+
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/tvadd"
+            android:background="@android:drawable/editbox_background"
+            android:gravity="top|left"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:padding="@dimen/paddingForm"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llFileAttachedContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll4"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_width"
+            android:background="#ddd" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pbForm"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+</RelativeLayout>
