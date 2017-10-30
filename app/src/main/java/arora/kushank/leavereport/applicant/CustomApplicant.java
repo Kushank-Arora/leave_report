@@ -39,6 +39,8 @@ public class CustomApplicant extends RecyclerView.Adapter {
     public static final String KEY_BAG_TADD = "BTADD";
     public static final String KEY_BAG_ATTACH_URL = "BATTACHURL";
     public static final String KEY_BAG_REPORT_KEY = "REPORTKEY";
+    public static final String KEY_BAG_COMMENT_CHAIRMAN = "REPORTCOMMENTCM";
+    public static final String KEY_BAG_COMMENT_VC = "REPORTCOMMENTVC";
     private final ArrayList data;
     private final LayoutInflater inflater;
     private final Context context;
@@ -133,6 +135,9 @@ public class CustomApplicant extends RecyclerView.Adapter {
         myBag.putInt(KEY_BAG_STATUS,tempValues.getStatus());
         myBag.putString(KEY_BAG_TADD,tempValues.getDetail().getAddress());
         myBag.putString(KEY_BAG_REPORT_KEY,tempValues.getReportKey());
+        myBag.putString(KEY_BAG_COMMENT_CHAIRMAN,tempValues.getCommentChairman());
+        myBag.putString(KEY_BAG_COMMENT_VC,tempValues.getCommentVC());
+
         if(tempValues.getDetail().getAttachment()==null) {
             myBag.putStringArrayList(KEY_BAG_ATTACH_URL, null);
         }

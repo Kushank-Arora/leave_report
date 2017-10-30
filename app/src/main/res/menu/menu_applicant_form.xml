@@ -13,9 +13,4 @@
         app:showAsAction="ifRoom"
         android:icon="@drawable/ic_attach_file_white_24dp"
         />
-    <item android:id="@+id/discard"
-        android:orderInCategory="100"
-        android:title="@string/discard"
-        app:showAsAction="never"
-        />
 </menu>

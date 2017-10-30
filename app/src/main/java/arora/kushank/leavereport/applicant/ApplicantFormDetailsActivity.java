@@ -53,7 +53,7 @@ import arora.kushank.leavereport.ReportClass;
 public class ApplicantFormDetailsActivity extends AppCompatActivity {
 
     private static final int MY_PERMISSIONS_REQUEST_READ_WRITE_STORAGE = 2;
-    TextView tvTOL,tvStatus;
+    TextView tvTOL,tvStatus, tvComment;
     LinearLayout llFileAttachedContainer;
     EditText etSubject,etFrom,etTo,etTAdd;
     private ReportClass myObj;
@@ -88,6 +88,8 @@ public class ApplicantFormDetailsActivity extends AppCompatActivity {
 
 
         myObj = new ReportClass();
+        myObj.setCommentChairman(myBag.getString(CustomApplicant.KEY_BAG_COMMENT_CHAIRMAN));
+        myObj.setCommentVC(myBag.getString(CustomApplicant.KEY_BAG_COMMENT_VC));
         myObj.setStatus(myBag.getInt(CustomApplicant.KEY_BAG_STATUS));
         myObj.setSubject(myBag.getString(CustomApplicant.KEY_BAG_SUBJECT));
         myObj.setReportKey(myBag.getString(CustomApplicant.KEY_BAG_REPORT_KEY));
@@ -120,6 +122,18 @@ public class ApplicantFormDetailsActivity extends AppCompatActivity {
     private void setValues() {
         tvTOL.setText(myObj.getDetail().getType());
         tvStatus.setText(Status.getStatusMsg(myObj.getStatus()));
+        String comment = "";
+        if(myObj.getCommentChairman()!=null && !myObj.getCommentChairman().trim().equals(""))
+            comment += "Chairman: "+myObj.getCommentChairman().trim();
+
+        if(myObj.getCommentVC()!=null && !myObj.getCommentVC().trim().equals(""))
+            comment += "VC: "+myObj.getCommentVC().trim();
+
+        if(comment.trim().equals(""))
+            tvComment.setText("No Comments");
+        else
+            tvComment.setText(comment);
+
 
         tvTOL.setFocusable(true);
         tvTOL.setFocusableInTouchMode(true);
@@ -285,6 +299,7 @@ public class ApplicantFormDetailsActivity extends AppCompatActivity {
     private void initViews() {
         tvTOL = (TextView) findViewById(R.id.tvTOL);
         tvStatus = (TextView) findViewById(R.id.tvStatus);
+        tvComment = (TextView) findViewById(R.id.tvComment);
 
         etSubject = (EditText) findViewById(R.id.etSubject);
         etFrom = (EditText) findViewById(R.id.etFrom);

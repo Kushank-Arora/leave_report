@@ -315,8 +315,6 @@ public class ApplicantForm extends AppCompatActivity implements View.OnClickList
                     }
                 });
                 return true;
-            case R.id.discard:
-                break;
             case R.id.attachFile:
                 boolean granted = ifPermissionNotGrantedAsk();
                 if (!granted) {
