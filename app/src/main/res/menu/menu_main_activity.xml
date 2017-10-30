@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/createAccount"
-        android:orderInCategory="100"
-        android:title="@string/createaccount"
-        app:showAsAction="never"
-        />
-    <item android:id="@+id/updateAccount"
-        android:orderInCategory="100"
-        android:title="@string/updateaccount"
-        app:showAsAction="never"
-        />
     <item android:id="@+id/SignOut"
         android:orderInCategory="100"
         android:title="@string/signOut"

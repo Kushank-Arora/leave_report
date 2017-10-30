@@ -540,6 +540,10 @@ public class ReportDetailActivity extends AppCompatActivity implements View.OnCl
 
     @Override
     public void onClick(View v) {
+        if(isOnline)
+            Toast.makeText(this, "You are Online!", Toast.LENGTH_SHORT).show();
+        else
+            Toast.makeText(this, "Sorry! You are Offline!", Toast.LENGTH_SHORT).show();
         switch (v.getId()) {
             case R.id.acceptTV:
                 if (!rejectTV.isEnabled())

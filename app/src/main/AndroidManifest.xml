@@ -47,10 +47,8 @@
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".applicant.ApplicantFormDetailsActivity" />
-        <activity android:name=".CreateAccountActivity" />
         <activity android:name=".applicant.userDetails" />
         <activity android:name=".verifier.LeavesCalendarActivity" />
-        <activity android:name=".OtherDetailsFormActivity"></activity>
     </application>
 
 </manifest>

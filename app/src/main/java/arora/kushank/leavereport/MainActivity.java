@@ -37,16 +37,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         util.holidaysAlloted = new HashMap<>();
 
         util.holidaysAlloted.put(new Pair<>(holidays[0],true),20);
-        util.holidaysAlloted.put(new Pair<>(holidays[0],false),10);
+        util.holidaysAlloted.put(new Pair<>(holidays[0],false),15);
 
         util.holidaysAlloted.put(new Pair<>(holidays[1],true),10);
         util.holidaysAlloted.put(new Pair<>(holidays[1],false),10);
 
-        util.holidaysAlloted.put(new Pair<>(holidays[2],true),Integer.MAX_VALUE);
-        util.holidaysAlloted.put(new Pair<>(holidays[2],false),Integer.MAX_VALUE);
+        util.holidaysAlloted.put(new Pair<>(holidays[2],true),0);
+        util.holidaysAlloted.put(new Pair<>(holidays[2],false),0);
 
-        util.holidaysAlloted.put(new Pair<>(holidays[3],true),Integer.MAX_VALUE);
-        util.holidaysAlloted.put(new Pair<>(holidays[3],false),Integer.MAX_VALUE);
+        util.holidaysAlloted.put(new Pair<>(holidays[3],true),0);
+        util.holidaysAlloted.put(new Pair<>(holidays[3],false),0);
     }
 
     @Override
@@ -100,20 +100,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = item.getItemId();
 
         switch(id){
-            case R.id.createAccount:
-                if(FirebaseAuth.getInstance().getCurrentUser()!=null) {
-                    Toast.makeText(this, "Please retry after Logging off from your account!", Toast.LENGTH_SHORT).show();
-                    return true;
-                }
-                startActivity(new Intent(this,CreateAccountActivity.class));
-                return true;
-            case R.id.updateAccount:
-                if(FirebaseAuth.getInstance().getCurrentUser()==null) {
-                    Toast.makeText(this, "Please retry after Logging in your account!", Toast.LENGTH_SHORT).show();
-                    return true;
-                }
-                startActivity(new Intent(this,OtherDetailsFormActivity.class));
-                return true;
             case R.id.SignOut:
                 FirebaseAuth.getInstance().signOut();
                 return true;

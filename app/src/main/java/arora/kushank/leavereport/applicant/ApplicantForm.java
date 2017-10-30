@@ -356,7 +356,13 @@ public class ApplicantForm extends AppCompatActivity implements View.OnClickList
             return false;
         }
         final int numDays = (int) util.getDaysCount(mTime1, mTime2);
-        final int numDaysLeft = curUser.getHolidaysLeft(typeOfLeave)-curUser.getHolidayPending(typeOfLeave);
+        int numDaysLeft;
+        try {
+            numDaysLeft = curUser.getHolidaysLeft(typeOfLeave) - curUser.getHolidayPending(typeOfLeave);
+        }catch(Exception e)
+        {
+            numDaysLeft = 0;
+        }
         if (numDays > numDaysLeft) {
             Toast.makeText(this, "No. of days permitted exceeded!", Toast.LENGTH_SHORT).show();
             return false;
