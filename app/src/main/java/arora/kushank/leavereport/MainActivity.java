@@ -34,19 +34,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         util.typeOfHolidays = new ArrayList<String>();
         for(String holiday: holidays)
             util.typeOfHolidays.add(holiday);
-        util.holidaysAlloted = new HashMap<>();
-
-        util.holidaysAlloted.put(new Pair<>(holidays[0],true),20);
-        util.holidaysAlloted.put(new Pair<>(holidays[0],false),15);
-
-        util.holidaysAlloted.put(new Pair<>(holidays[1],true),10);
-        util.holidaysAlloted.put(new Pair<>(holidays[1],false),10);
-
-        util.holidaysAlloted.put(new Pair<>(holidays[2],true),0);
-        util.holidaysAlloted.put(new Pair<>(holidays[2],false),0);
-
-        util.holidaysAlloted.put(new Pair<>(holidays[3],true),0);
-        util.holidaysAlloted.put(new Pair<>(holidays[3],false),0);
     }
 
     @Override

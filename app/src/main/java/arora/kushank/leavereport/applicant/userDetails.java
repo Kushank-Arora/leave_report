@@ -168,7 +168,7 @@ public class userDetails extends AppCompatActivity {
 
             int holAllot, holLeft, holPending;
             holPending = curUser.getHolidayPending(util.typeOfHolidays.get(i));
-            holAllot = util.holidaysAlloted.get(new Pair<>(util.typeOfHolidays.get(i),curUser.isFemale()));
+            holAllot = curUser.getHolidaysAlloted(util.typeOfHolidays.get(i));
             holLeft = curUser.getHolidaysLeft(util.typeOfHolidays.get(i));
             tvType.setText(util.typeOfHolidays.get(i));
 
@@ -323,7 +323,7 @@ public class userDetails extends AppCompatActivity {
 
         for(int i=0 ; i<util.typeOfHolidays.size(); i++)
         {
-            if(util.holidaysAlloted.get(new Pair<>(util.typeOfHolidays.get(i),curUser.isFemale()))==Integer.MAX_VALUE)
+            if(curUser.getHolidaysAlloted(util.typeOfHolidays.get(i))==Integer.MAX_VALUE)
                 continue;
 
             TextView tv = new TextView(this);
@@ -333,7 +333,7 @@ public class userDetails extends AppCompatActivity {
             tv.setText(util.typeOfHolidays.get(i));
 
             float holidaysLeft = curUser.getHolidaysLeft(util.typeOfHolidays.get(i));
-            float holidaysAlloted = util.holidaysAlloted.get(new Pair<>(util.typeOfHolidays.get(i),curUser.isFemale()));
+            float holidaysAlloted = curUser.getHolidaysAlloted(util.typeOfHolidays.get(i));
 
             Bitmap img = getImage(
                     (holidaysAlloted-holidaysLeft)/holidaysAlloted,

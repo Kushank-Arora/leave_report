@@ -15,7 +15,6 @@ import java.util.Map;
  */
 public class util {
     public static ArrayList<String> typeOfHolidays;
-    public static Map<Pair<String,Boolean>,Integer> holidaysAlloted;
     public static String getTimeString(long timeOfArrival,Context context) {
         int today = Calendar.getInstance().get(Calendar.DATE);
         Calendar cal = Calendar.getInstance();

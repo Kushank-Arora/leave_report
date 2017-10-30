@@ -16,6 +16,7 @@ public class User {
     private String designation;
     private boolean isFemale;
     public Map<String,Integer> holidaysLeft;
+    public Map<String,Integer> holidaysAlloted;
     public Map<String,Integer> holidaysPending;
     private User reportingTo;
 
@@ -36,6 +37,14 @@ public class User {
         this.user_id=user_id;
         this.designation=designation;
         this.reportingTo = reportingTo;
+    }
+
+    public Map<String, Integer> getHolidaysAlloted() {
+        return holidaysAlloted;
+    }
+
+    public void setHolidaysAlloted(Map<String, Integer> holidaysAlloted) {
+        this.holidaysAlloted = holidaysAlloted;
     }
 
     public Map<String, Integer> getHolidaysPending() {
@@ -85,7 +94,7 @@ public class User {
     public void setHolidays(){
         holidaysLeft = new HashMap<>(util.typeOfHolidays.size());
         for(String holiday: util.typeOfHolidays)
-            holidaysLeft.put(holiday, util.holidaysAlloted.get(new Pair<>(holiday,this.isFemale)));
+            holidaysLeft.put(holiday, 10);
 
         holidaysPending = new HashMap<>(util.typeOfHolidays.size());
         for(String holiday: util.typeOfHolidays)
@@ -130,5 +139,9 @@ public class User {
 
     public void setUser_id(String user_id) {
         this.user_id = user_id;
+    }
+
+    public int getHolidaysAlloted(String holiday) {
+        return holidaysAlloted.get(holiday);
     }
 }
