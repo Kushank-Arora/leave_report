@@ -321,8 +321,9 @@ public class ApplicantForm extends AppCompatActivity implements View.OnClickList
                     Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show();
                     return true;
                 }
+                Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(Intent.ACTION_PICK);
-                i.setType("*/*");
+                i.setType("image/*");
                 startActivityForResult(i, GOT_FILE);
                 return true;
             default:
